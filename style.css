@@ -769,130 +769,204 @@ body.dark-mode #userInput { background: #2d2d2d; color: white; border-color: #44
 }
 
 /* =========================================
-   VENTURE SUMMARY (Main Page)
+   VENTURE SUMMARY (Upgraded Card Look)
    ========================================= */
 
 .venture-summary {
     padding: 100px 20px;
-    background-color: #f8fafc; /* Very light cool grey to separate from white sections */
-    border-top: 1px solid #e5e7eb;
+    background-color: #f3f4f6; /* Slightly darker gray to make the white card pop */
 }
 
-.summary-content {
-    max-width: 800px; /* Limits width for readability (like a document) */
+/* The "Pro Card" Container */
+.venture-card {
+    max-width: 900px;
     margin: 0 auto;
+    background: #ffffff;
+    padding: 60px;
+    border-radius: 24px; /* Smooth, modern corners */
+    /* Soft, deep shadow to create "lift" */
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08); 
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional: A subtle top blue accent line */
+.venture-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+}
+
+/* Award Badge - Top Left */
+.award-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.award-pill {
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 50px;
+    border: 1px solid #dbeafe;
+    letter-spacing: 0.5px;
+}
+
+.award-text {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 500;
 }
 
 .section-title {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #111827;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    line-height: 1.2;
 }
 
 .summary-body p {
     font-size: 1.05rem;
     line-height: 1.7;
-    color: #374151;
+    color: #4b5563;
     margin-bottom: 20px;
+    max-width: 750px;
 }
 
-.summary-list {
-    list-style: none;
-    padding: 0;
-    margin: 30px 0;
-    border-left: 3px solid #2563eb; /* Blue accent line */
-    padding-left: 20px;
-}
-
-.summary-list li {
-    font-size: 1rem;
-    color: #111827;
-    margin-bottom: 12px;
+.lead-text {
+    color: #111827 !important; /* Darker for the first paragraph */
     font-weight: 500;
 }
 
-.summary-list i {
-    color: #2563eb;
-    margin-right: 10px;
-    font-size: 0.9rem;
-}
-
-.summary-actions {
+/* The Feature List (No more vertical line) */
+.feature-grid {
+    margin: 40px 0;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 30px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-top: 1px solid #e5e7eb;
-    padding-top: 30px;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.platform-link {
-    font-size: 1rem;
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f9fafb; /* Very subtle background for items */
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 1px solid #f3f4f6;
+    transition: transform 0.2s;
+}
+
+.feature-item:hover {
+    border-color: #e5e7eb;
+    background: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.check-icon {
+    width: 24px;
+    height: 24px;
+    background: #dbeafe;
+    color: #2563eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.feature-item span {
+    font-weight: 500;
     color: #374151;
 }
 
-.text-link {
-    color: #2563eb;
-    text-decoration: none;
-    font-weight: 600;
-    margin-left: 8px;
+.divider {
+    border: 0;
+    height: 1px;
+    background: #e5e7eb;
+    margin: 40px 0;
 }
 
-.text-link:hover {
+/* Actions Area */
+.summary-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.platform-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.platform-label {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.link-brand {
+    color: #2563eb;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.link-brand:hover {
     text-decoration: underline;
 }
 
-/* Secondary Button for "Read Strategy" */
-.btn-secondary {
-    display: inline-block;
-    padding: 10px 24px;
-    border: 1px solid #d1d5db;
-    border-radius: 50px;
-    color: #374151;
+/* The Strategy Button */
+.btn-strategy {
+    padding: 12px 28px;
+    background-color: #111827; /* Dark button */
+    color: #fff;
     text-decoration: none;
-    font-size: 0.9rem;
+    border-radius: 50px;
     font-weight: 500;
+    font-size: 0.95rem;
     transition: all 0.2s;
 }
 
-.btn-secondary:hover {
-    border-color: #111827;
-    color: #111827;
-    background: white;
-}
-
-.summary-recognition {
-    font-size: 0.95rem;
-    color: #4b5563;
-    margin-bottom: 15px;
-}
-
-.badge {
-    background: #eff6ff;
-    color: #1d4ed8;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-right: 8px;
-    letter-spacing: 0.5px;
+.btn-strategy:hover {
+    background-color: #374151;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .summary-footer {
+    margin-top: 30px;
     font-size: 0.85rem;
-    color: #9ca3af; /* Muted */
-    margin-top: 10px;
+    color: #9ca3af;
+    text-align: center;
 }
 
-/* Mobile Adjustments */
+/* Mobile Tweak */
 @media (max-width: 768px) {
+    .venture-card {
+        padding: 30px 20px;
+    }
     .summary-actions {
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
+    }
+    .btn-strategy {
+        width: 100%;
+        text-align: center;
     }
 }
