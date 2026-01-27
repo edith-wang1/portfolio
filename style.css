@@ -74,10 +74,10 @@ h1 { font-family: var(--font-heading); font-size: 3.5rem; line-height: 1.1; marg
 .focus-highlights li { margin-bottom: 8px; font-size: 0.95rem; }
 .icon-huge { font-size: 5rem; color: #93C5FD; }
 
-/* Consulting */
-.consulting-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-.consulting-card { background: white; border: 1px solid #E5E7EB; padding: 30px; border-radius: 12px; transition: transform 0.2s; }
-.consulting-card:hover { transform: translateY(-5px); border-color: var(--text-main); }
+/* Applied Projects*/
+.applied_projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.applied_projects-card { background: white; border: 1px solid #E5E7EB; padding: 30px; border-radius: 12px; transition: transform 0.2s; }
+.applied_projects-card:hover { transform: translateY(-5px); border-color: var(--text-main); }
 .card-top { display: flex; justify-content: space-between; margin-bottom: 15px; }
 .icon-red { font-size: 2rem; color: #DC2626; }
 .icon-blue { font-size: 2rem; color: #2563EB; }
@@ -155,7 +155,7 @@ footer { text-align: center; padding: 40px 0; color: var(--text-muted); font-siz
 
 /* Mobile */
 @media (max-width: 768px) {
-    .hero-grid, .consulting-grid, .focus-card, .timeline-row { grid-template-columns: 1fr; }
+    .hero-grid, .applied_projects-grid, .focus-card, .timeline-row { grid-template-columns: 1fr; }
     .hero-image-wrapper { order: -1; margin-bottom: 20px; }
     .focus-visual { display: none; }
     .timeline-time { text-align: left; border-right: none; border-left: 2px solid #eee; padding-left: 20px; }
@@ -288,7 +288,7 @@ footer { text-align: center; padding: 40px 0; color: var(--text-muted); font-siz
 }
 
 /* --- Force 3 Cards in One Row --- */
-.consulting-grid {
+.applied_projects-grid {
     display: grid;
     /* 核心代码：强制分成三列，每列占 1 份宽度 */
     grid-template-columns: 1fr 1fr 1fr; 
@@ -298,23 +298,23 @@ footer { text-align: center; padding: 40px 0; color: var(--text-muted); font-siz
 
 /* 手机端适配：如果不加这个，手机上看会挤成一团，所以手机上还是让它变竖排 */
 @media (max-width: 900px) {
-    .consulting-grid {
+    .applied_projects-grid {
         grid-template-columns: 1fr; /* 手机上改回一列 */
     }
 }
 
 
-/* --- Consulting Card Hover Reveal Effect --- */
+/* --- applied_projects Card Hover Reveal Effect --- */
 
 /* 1. 让卡片本身的高度变化更丝滑 */
-.consulting-card {
+.applied_projects-card {
     transition: all 0.3s ease-in-out;
     /* 确保卡片内容不会溢出边界 */
     overflow: hidden; 
 }
 
 /* 2. 默认状态下，隐藏详情文字 */
-.consulting-card .details {
+.applied_projects-card .details {
     max-height: 0;      /* 高度压扁为 0 */
     opacity: 0;         /* 透明度为 0 (完全看不见) */
     overflow: hidden;   /* 隐藏超出的内容 */
@@ -324,14 +324,14 @@ footer { text-align: center; padding: 40px 0; color: var(--text-muted); font-siz
 }
 
 /* 3. 鼠标悬停状态下 (Hover)，展示详情文字 */
-.consulting-card:hover .details {
+.applied_projects-card:hover .details {
     max-height: 300px;  /* 设置一个足够大的最大高度，让文字能完全显示 */
     opacity: 1;         /* 变回不透明 */
     margin-top: 15px;   /* 恢复上边距，让文字和标题有点距离 */
 }
 
 /* (可选) 鼠标放上去时，让卡片的背景色稍微变一点点，增加交互感 */
-.consulting-card:hover {
+.applied_projects-card:hover {
     background-color: #fafafa; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.08); /* 阴影加深一点，更有浮起来的感觉 */
 }
@@ -352,17 +352,17 @@ body.dark-mode .nav-item {
 body.dark-mode .nav-item:hover {
     color: #64ffda;
 }
-body.dark-mode .consulting-card {
+body.dark-mode .applied_projects-card {
     background-color: #1e1e1e;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
-body.dark-mode .consulting-card h4 {
+body.dark-mode .applied_projects-card h4 {
     color: #ffffff;
 }
-body.dark-mode .consulting-card .subtitle {
+body.dark-mode .applied_projects-card .subtitle {
     color: #a0a0a0;
 }
-body.dark-mode .consulting-card .details {
+body.dark-mode .applied_projects-card .details {
     color: #cccccc;
 }
 /* 强制覆盖浅色背景 */
