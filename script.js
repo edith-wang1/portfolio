@@ -7,11 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!chatBody) return;
 
   // 1) Greeting (single source of truth)
-  addBot("Hi, I’m Edith’s AI concierge. You can ask about experience, applied projects, or the AI venture.");
+  // DELETE OR COMMENT OUT THIS LINE:
+  // addBot("Hi, I’m Edith’s AI concierge. You can ask about experience, applied projects, or the AI venture.");
 
   // 2) Toggle (single class name)
   window.toggleChat = () => {
     chatWindow?.classList.toggle("open");
+    
+    // NEW: Check if chat is empty. If so, say hello!
+    if (chatBody && chatBody.childElementCount === 0) {
+        addBot("Hi, I’m Edith’s AI concierge. You can ask about experience, applied projects, or the AI venture.");
+    }
   };
 
   // 3) Quick replies
