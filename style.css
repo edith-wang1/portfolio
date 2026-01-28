@@ -528,3 +528,52 @@ body.dark-mode .insight-card p {
     min-width: 18px; 
     text-align: center;
 }
+
+/* --- Credential Bar (Subtle & Professional) --- */
+.credentials-section {
+    margin-top: 50px;           /* Push it to the bottom */
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Very subtle divider line */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.cred-label {
+    font-size: 0.75rem;         /* Small, uppercase label */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #94a3b8;             /* Muted Slate Grey */
+    font-weight: 600;
+}
+
+.cred-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;                  /* Space between badges */
+}
+
+.cred-badge {
+    font-size: 0.8rem;          /* Smaller, elegant text */
+    color: #e2e8f0;             /* Off-white text */
+    border: 1px solid #475569;  /* Thin, dark grey border */
+    background: transparent;    /* NO background color */
+    padding: 4px 12px;
+    border-radius: 50px;        /* Pill shape */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cred-badge i {
+    color: #94a3b8;             /* Muted icon color */
+    font-size: 0.8rem;
+}
+
+.cred-badge:hover {
+    border-color: #94a3b8;      /* Slight glow on hover */
+    background: rgba(255,255,255,0.05);
+}
