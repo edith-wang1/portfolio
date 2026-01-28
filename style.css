@@ -529,11 +529,11 @@ body.dark-mode .insight-card p {
     text-align: center;
 }
 
-/* --- Refined Credentials Footer (Golden Authority) --- */
+/* --- Professional Credentials (Clean & Visible) --- */
 .credentials-footer {
-    margin-top: 60px;
+    margin-top: 50px;
     padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    border-top: 1px solid #e2e8f0; /* Light grey divider */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -545,7 +545,7 @@ body.dark-mode .insight-card p {
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #94a3b8;                /* Label remains muted grey to let pills shine */
+    color: #64748b;        /* Slate Grey Label */
     font-weight: 700;
     margin-bottom: 5px;
 }
@@ -559,36 +559,28 @@ body.dark-mode .insight-card p {
 
 .cred-pill {
     font-size: 0.9rem;
-    /* NEW: Soft Gold Text (Readable & Premium) */
-    color: #fde68a;                
-    
-    /* NEW: Very subtle warm background */
-    background: rgba(251, 191, 36, 0.05); 
-    
-    /* NEW: Gold Border */
-    border: 1px solid rgba(251, 191, 36, 0.3); 
-    
+    color: #334155;        /* DARK SLATE TEXT - Clearly visible */
+    background: #ffffff;   /* White background */
+    border: 1px solid #cbd5e1; /* Grey border */
     padding: 8px 18px;
     border-radius: 50px;
     display: flex;
     align-items: center;
     gap: 8px;
-    font-weight: 500;
-    backdrop-filter: blur(5px);
+    font-weight: 600;      /* Slightly bolder for readability */
     transition: all 0.3s ease;
 }
 
-/* Icon Styling - Bright Gold */
+/* Icons - Subtle Blue-Grey to match your theme */
 .cred-pill i {
-    color: #fbbf24;                /* Vibrant Amber/Gold */
+    color: #64748b;
     font-size: 0.95rem;
 }
 
-/* Hover Effect - Glows Brighter */
+/* Hover Effect */
 .cred-pill:hover {
-    background: rgba(251, 191, 36, 0.15); /* Brighter background */
-    border-color: #fcd34d;         /* Brighter border */
-    color: #fffbeb;                /* Text turns almost white/cream */
+    border-color: #94a3b8;
+    background: #f8fafc;   /* Very light grey on hover */
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.1); /* Subtle gold glow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
