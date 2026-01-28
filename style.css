@@ -597,7 +597,7 @@ body.dark-mode .insight-card p {
     border-radius: 50px;
     
     /* POSITION: Push firmly to the right */
-    margin-left: 60px;            /* Huge gap from "Insights" link */
+    margin-left: 100px;            /* Huge gap from "Insights" link */
     margin-right: 8px;            /* Sits tight against the Dark Mode moon */
     
     /* Alignment Fixes */
