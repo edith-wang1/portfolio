@@ -12,7 +12,7 @@
         body { background-color: #fff; color: #333; }
         
         .page-container {
-            max-width: 750px; /* Reading width */
+            max-width: 720px; /* Reading width */
             margin: 0 auto;
             padding: 60px 20px 100px;
         }
@@ -28,13 +28,13 @@
         }
         .back-nav a:hover { color: #111827; }
 
-        .doc-header { margin-bottom: 60px; border-bottom: 1px solid #eee; padding-bottom: 30px; }
-        .doc-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #111827; margin-bottom: 15px; line-height: 1.2; }
-        .doc-subtitle { font-size: 1.1rem; color: #6b7280; font-weight: 400; }
+        .doc-header { margin-bottom: 55px; border-bottom: 1px solid #eee; padding-bottom: 28px; }
+        .doc-title { font-family: 'Playfair Display', serif; font-size: 2.25rem; color: #111827; margin-bottom: 12px; line-height: 1.2; }
+        .doc-subtitle { font-size: 1rem; color: #6b7280; font-weight: 400; }
 
-        .content-block { margin-bottom: 50px; }
-        .block-title { font-size: 1.2rem; font-weight: 700; color: #111827; margin-bottom: 15px; border-left: 3px solid #2563eb; padding-left: 15px; }
-        .block-text { font-size: 1.05rem; line-height: 1.7; color: #374151; margin-bottom: 15px; }
+        .content-block { margin-bottom: 46px; }
+        .block-title { font-size: 1.1rem; font-weight: 700; color: #111827; margin-bottom: 14px; border-left: 3px solid #2563eb; padding-left: 14px; }
+        .block-text { font-size: 0.97rem; line-height: 1.75; color: #374151; margin-bottom: 14px; }
         
         .principles-list { list-style: none; padding: 0; margin-top: 20px; }
         .principles-list li { margin-bottom: 25px; }
@@ -44,11 +44,118 @@
         .cta-link { color: #2563eb; font-weight: 600; text-decoration: none; }
         .cta-link:hover { text-decoration: underline; }
 
-        .award-item { margin-bottom: 20px; }
-        .award-title { font-weight: 600; color: #111827; }
-        .award-desc { font-size: 0.95rem; color: #4b5563; }
+        .award-item { margin-bottom: 22px; }
+        .award-header { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; flex-wrap: wrap; }
+        .award-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 10px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+        .award-badge.gold {
+            background: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fde68a;
+        }
+        .award-badge.blue {
+            background: #dbeafe;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+        }
+        .award-badge i { font-size: 0.75rem; }
+        .award-title { font-weight: 600; color: #111827; font-size: 0.97rem; }
+        .award-desc { font-size: 0.9rem; color: #4b5563; line-height: 1.6; margin-top: 4px; }
+
+        /* Compact bulleted capabilities list */
+        .cap-list { list-style: disc; padding-left: 22px; margin-top: 10px; margin-bottom: 0; }
+        .cap-list li {
+            font-size: 0.95rem;
+            color: #374151;
+            line-height: 1.6;
+            margin-bottom: 6px;
+        }
 
         .footer-note { font-size: 0.9rem; color: #6b7280; margin-top: 80px; border-top: 1px solid #eee; padding-top: 30px; }
+
+        /* Technical additions */
+        .workflow-diagram {
+            background: #0f172a;
+            color: #e2e8f0;
+            border-radius: 8px;
+            padding: 28px 24px;
+            margin: 25px 0 10px;
+            font-family: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.9;
+            overflow-x: auto;
+        }
+        .workflow-diagram .step { display: block; }
+        .workflow-diagram .arrow { color: #64748b; padding: 0 4px; }
+        .workflow-diagram .stage-label { color: #94a3b8; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-top: 14px; margin-bottom: 4px; }
+        .workflow-diagram .stage-label:first-child { margin-top: 0; }
+        .workflow-diagram .ai { color: #60a5fa; }
+        .workflow-diagram .det { color: #34d399; }
+        .workflow-diagram .human { color: #fbbf24; }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-top: 20px;
+        }
+        .tech-card {
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 16px 18px;
+        }
+        .tech-card .tc-title { font-weight: 600; color: #111827; font-size: 0.95rem; margin-bottom: 4px; }
+        .tech-card .tc-meta {
+            font-size: 0.7rem;
+            color: #2563eb;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .tech-card .tc-desc { font-size: 0.86rem; color: #4b5563; line-height: 1.6; }
+
+        .term {
+            font-size: 0.85em;
+            font-weight: 600;
+            background: #eff6ff;
+            color: #1d4ed8;
+            padding: 1px 7px;
+            border-radius: 3px;
+            border: 1px solid #dbeafe;
+            white-space: nowrap;
+        }
+
+        .tag-row { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-family: 'SF Mono', 'Menlo', 'Monaco', monospace;
+            background: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #dbeafe;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .legend { font-size: 0.82rem; color: #6b7280; margin-top: 12px; }
+        .legend .lg-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; vertical-align: middle; margin-right: 5px; }
+        .legend .lg-ai { background: #60a5fa; }
+        .legend .lg-det { background: #34d399; }
+        .legend .lg-human { background: #fbbf24; }
+        .legend span { margin-right: 14px; }
     </style>
 </head>
 <body>
@@ -60,26 +167,100 @@
 
         <header class="doc-header">
             <h1 class="doc-title">Applied AI for Financial Compliance</h1>
-            <p class="doc-subtitle">Designing compliant, audit-ready AI systems for complex financial workflows.</p>
+            <p class="doc-subtitle">Designing compliant, audit-ready AI workflows for complex financial decision-making.</p>
         </header>
 
         <div class="content-block">
             <h2 class="block-title">Overview</h2>
             <p class="block-text">
-                This initiative focuses on applying AI to one of the most error-prone and fragmented areas of financial operations: cross-border tax and compliance.
+                Cross-border tax and compliance is messy. The hard part isn't answering questions. It's structuring decisions from incomplete information across multiple jurisdictions.
             </p>
             <p class="block-text">
-                Rather than pursuing full automation, the platform is designed around governance, professional oversight, and decision traceability — aligning AI capabilities with the realities of regulated environments.
+                This isn't a chatbot, and it isn't full automation. It's a <strong>human-in-the-loop AI workflow</strong>: structured intake, retrieval-grounded reasoning, rule-based checks, and professional review.
+            </p>
+            <div class="tag-row">
+                <span class="tag">Hybrid AI Architecture</span>
+                <span class="tag">RAG (Retrieval-Augmented Generation)</span>
+                <span class="tag">Schema-Constrained Output</span>
+                <span class="tag">Rule-Based Validation</span>
+                <span class="tag">Human-in-the-Loop (HITL)</span>
+                <span class="tag">Audit Trail</span>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h2 class="block-title">The Problem</h2>
+            <p class="block-text">
+                Tax and compliance work spans jurisdictions, advisors, documents, and disconnected tools. The information is sparse, conflicting, and high-stakes.
+            </p>
+            <p class="block-text">
+                A general-purpose AI assistant can't do this. Outputs need to be <strong>accurate, traceable to real sources, and audit-ready</strong>. The system has to collect the right facts, flag what's missing, apply the right rules, know when it's uncertain, and hand off risky cases to a human.
             </p>
         </div>
 
         <div class="content-block">
-            <h2 class="block-title">The Problem Space</h2>
+            <h2 class="block-title">How the Workflow Is Designed</h2>
             <p class="block-text">
-                Cross-border tax and compliance workflows are fragmented across jurisdictions, advisors, and disconnected tools.
+                AI handles the parts it's good at. Fixed rules handle the parts that need to be exact. Humans handle the parts where the stakes are highest.
             </p>
-            <p class="block-text">
-                This fragmentation increases error rates, delays professional review, and disproportionately impacts individuals and small firms without access to institutional compliance infrastructure.
+
+            <div class="workflow-diagram" aria-label="AI workflow pipeline">
+<span class="stage-label">Input</span>
+<span class="step"><span class="ai">User Scenario</span> <span class="arrow">→</span> <span class="ai">Structured Intake</span></span>
+<span class="stage-label">AI-Assisted Reasoning</span>
+<span class="step"><span class="ai">Clarification</span> <span class="arrow">→</span> <span class="ai">Research Grounded in Tax &amp; Compliance Sources</span></span>
+<span class="stage-label">Rules &amp; Checks</span>
+<span class="step"><span class="det">Rule-Based Validation</span> <span class="arrow">→</span> <span class="det">Risk &amp; Confidence Flags</span></span>
+<span class="stage-label">Output &amp; Oversight</span>
+<span class="step"><span class="det">Readiness Report</span> <span class="arrow">→</span> <span class="human">Professional Review</span> <span class="arrow">→</span> <span class="human">Audit Trail</span></span>
+            </div>
+            <div class="legend">
+                <span><span class="lg-dot lg-ai"></span>AI-assisted</span>
+                <span><span class="lg-dot lg-det"></span>Rule-based logic</span>
+                <span><span class="lg-dot lg-human"></span>Human review</span>
+            </div>
+
+            <p class="block-text" style="margin-top: 25px;">
+                AI interprets the scenario and asks follow-ups. Rules apply thresholds, eligibility tests, and exceptions. Humans review whatever the system can't sign off on alone.
+            </p>
+        </div>
+
+        <div class="content-block">
+            <h2 class="block-title">Key Components</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tc-title">Structured Intake</div>
+                    <span class="tc-meta">schema-constrained output</span>
+                    <div class="tc-desc">Guided capture of complex scenarios using a defined schema. Free-form input goes in; clean, structured data comes out — ready for downstream rules and retrieval.</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tc-title">Retrieval-Grounded Reasoning</div>
+                    <span class="tc-meta">RAG · citation-aware</span>
+                    <div class="tc-desc">AI answers are anchored to real tax and compliance sources via a retrieval pipeline (RAG), with citations. Less hallucination, clear provenance.</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tc-title">Rules &amp; Thresholds</div>
+                    <span class="tc-meta">deterministic logic</span>
+                    <div class="tc-desc">Eligibility, residency, and treaty thresholds run on fixed, reviewable logic — not left to the AI's interpretation.</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tc-title">Risk &amp; Confidence Signals</div>
+                    <span class="tc-meta">uncertainty-aware routing</span>
+                    <div class="tc-desc">Tracks how certain the system is at each step and flags risk. Unclear or high-stakes cases get routed to a human reviewer.</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tc-title">Readiness Reports</div>
+                    <span class="tc-meta">structured handoff</span>
+                    <div class="tc-desc">A clean summary of facts collected, what's missing, rules applied, and open risks. Built to make professional review faster.</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tc-title">Audit Trail</div>
+                    <span class="tc-meta">end-to-end observability</span>
+                    <div class="tc-desc">Every step is logged: inputs, sources used, rules applied, reviewer actions. Traceable and defensible after the fact.</div>
+                </div>
+            </div>
+            <p class="block-text" style="font-size: 0.85rem; color: #6b7280; margin-top: 18px; font-style: italic;">
+                In plain terms: <span class="term">RAG</span> means the AI looks up real tax sources before answering instead of making things up. <span class="term">Schema</span> is a defined structure for the input — like a smart form that ensures nothing important is missed. <span class="term">Deterministic logic</span> means rules that always behave the same way, not AI guesses.
             </p>
         </div>
 
@@ -87,24 +268,20 @@
             <h2 class="block-title">Design Principles</h2>
             <ul class="principles-list">
                 <li>
-                    <span class="principle-head">Control before scale</span>
-                    Automation should strengthen governance and compliance before expanding scope.
+                    <span class="principle-head">Right tool for the right step</span>
+                    AI where judgment helps. Rules where the answer has to be exact. The line between them is intentional.
                 </li>
                 <li>
                     <span class="principle-head">Human-in-the-loop by design</span>
-                    AI can support intake, clarification, and validation, while professionals retain accountability for final judgment.
+                    Professional review is part of the workflow, not a fallback when the AI fails.
                 </li>
                 <li>
-                    <span class="principle-head">Auditability as a first-class requirement</span>
-                   Every meaningful output should be traceable, reviewable, and suitable for regulated environments.
+                    <span class="principle-head">Auditability from day one</span>
+                    Every output traces back to its inputs, sources, rules, and reviewers. Built for regulated environments from the start.
                 </li>
                 <li>
-                    <span class="principle-head">Grounded outputs over generic responses</span>
-                    AI outputs should be supported by relevant rules, source references, and structured reasoning rather than unsupported generated text.
-                </li>
-                <li>
-                    <span class="principle-head">Evaluation before trust</span>
-                    AI workflows should be tested against known scenarios, reviewed for accuracy, and monitored for failure patterns before being relied on in high-stakes use cases.
+                    <span class="principle-head">Control before scale</span>
+                    Governance comes before feature breadth. The system is built to be checked, not just to produce answers.
                 </li>
             </ul>
         </div>
@@ -112,21 +289,19 @@
         <div class="content-block">
             <h2 class="block-title">Platform Implementation: AskTaxly</h2>
             <p class="block-text">
-                AskTaxly is the platform implementation of this initiative, designed to operationalize AI-assisted intake, validation, and professional review within real-world compliance workflows.
+                AskTaxly is where this gets built. It runs AI-assisted intake, clarification, validation, and professional review for cross-border compliance.
             </p>
-            <p class="block-text" style="font-size: 0.95rem; opacity: 0.8;">
-                The system emphasizes structured data capture, exception handling, and review workflows rather than opaque end-to-end automation.
-            </p>
-                <li>
-                    <span class="Key workflow capabilities include:</span>
-                    Structured intake for cross-border tax scenarios
-                    AI-assisted clarification of missing facts
-                    Retrieval-grounded analysis using relevant tax and compliance knowledge
-                    Rule-based checks for thresholds, eligibility, and exceptions
-                    Risk flags and missing information tracking
-                    Readiness reports for professional review
-                    Audit trail design for traceability and governance
-            
+            <p class="block-text" style="margin-bottom: 4px;">Key capabilities:</p>
+            <ul class="cap-list">
+                <li>Structured intake for complex tax scenarios</li>
+                <li>AI-assisted clarification of missing facts</li>
+                <li>Retrieval-grounded analysis (RAG) over relevant tax and compliance knowledge</li>
+                <li>Rule-based checks for thresholds, eligibility, and exceptions</li>
+                <li>Risk flags and missing-information tracking</li>
+                <li>Readiness reports for professional review</li>
+                <li>Audit trail for governance and traceability</li>
+            </ul>
+
             <div class="cta-box">
                 👉 Visit AskTaxly &rarr; <a href="https://asktaxly.com" target="_blank" class="cta-link">https://asktaxly.com</a>
             </div>
@@ -135,26 +310,40 @@
         <div class="content-block">
             <h2 class="block-title">My Role</h2>
             <p class="block-text">
-                I lead problem definition, system architecture, and compliance-oriented design decisions, drawing on my background in finance governance, enterprise systems, and regulated operating environments.
+                I lead problem definition, AI workflow design, and system architecture. My job is turning regulated financial processes into structured, reviewable AI workflows that align with governance, risk, and oversight requirements.
+            </p>
+            <p class="block-text">
+                The focus is the system layer: where AI judgment ends and fixed rules take over, how confidence and risk signals route decisions, and how the workflow produces outputs that hold up under professional and regulatory review.
             </p>
         </div>
 
         <div class="content-block">
             <h2 class="block-title">Why This Matters</h2>
             <p class="block-text">
-                Complexity in cross-border tax and compliance disproportionately affects skilled workers, international students, and small organizations, increasing noncompliance risk and limiting economic participation.
+                Cross-border tax complexity hits globally mobile professionals, international students, skilled workers, and small organizations the hardest. They rarely have access to institutional compliance infrastructure.
             </p>
             <p class="block-text">
-                Improving access to structured guidance, compliance readiness, and professional workflows supports workforce mobility, regulatory adherence, and more efficient participation in the economy.
+                AI creates real value here: better upfront fact collection, less manual back-and-forth, earlier risk visibility, and faster professional review. The goal isn't to replace experts. It's to make compliance workflows more structured, traceable, and reliable.
             </p>
         </div>
 
         <div class="content-block">
             <h2 class="block-title">Selected Recognition</h2>
-            
+
             <div class="award-item">
-                <div class="award-title">Global Innovation Night Pitch Competition — Award Recipient (2025)</div>
-                <div class="award-desc">Selected by judges at Arizona State University’s Blackstone LaunchPad for a globally impactful AI platform concept; awarded competitive funding.</div>
+                <div class="award-header">
+                    <span class="award-badge gold"><i class="fas fa-trophy"></i> Award Winner</span>
+                    <span class="award-title">Venture Devils Demo Day — Spring 2026</span>
+                </div>
+                <div class="award-desc">Selected through ASU's Venture Devils program for venture performance during Spring 2026 Demo Day; awarded competitive funding through the Edson Student Entrepreneur Initiative.</div>
+            </div>
+
+            <div class="award-item">
+                <div class="award-header">
+                    <span class="award-badge blue"><i class="fas fa-medal"></i> Award Winner</span>
+                    <span class="award-title">Global Innovation Night Pitch Competition — 2025</span>
+                </div>
+                <div class="award-desc">Selected by judges at Arizona State University's Blackstone LaunchPad for a globally impactful AI platform concept; awarded competitive funding.</div>
             </div>
         </div>
 
